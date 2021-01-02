@@ -4,7 +4,7 @@ Exploit code based on https://www.secura.com/blog/zero-logon and https://github.
 
 To exploit, clear out any previous Impacket installs you have and install Impacket from https://github.com/SecureAuthCorp/impacket/commit/b867b21 or newer.
 
-``apt update
+`apt update
 
 apt remove --purge impacket-scripts python3-impacket
 apt autoremove
@@ -15,7 +15,7 @@ cd ..
 git clone https://github.com/SecureAuthCorp/impacket.git
 cd impacket
 sudo python3 setup.py install
-git clone``
+git clone`
 
 Then, do:
 
